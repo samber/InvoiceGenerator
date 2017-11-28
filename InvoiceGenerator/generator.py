@@ -21,6 +21,8 @@ class Address:
     address = ""
     city = ""
     zip = ""
+    country = ""
+    siret = ""
     phone = ""
     email = ""
     bank_name = ""
@@ -31,7 +33,7 @@ class Address:
         return [
             "%s %s" % (self.firstname, self.lastname),
             self.address,
-            "%s %s" % (self.zip, self.city),
+            "%s %s %s" % (self.zip, self.city, self.country),
         ]
 
     def getContactLines(self):
