@@ -191,7 +191,7 @@ class SimpleInvoice(BaseInvoice):
         self.pdf.setFont('DejaVu', 8)
 
         text = self.pdf.beginText((LEFT + 2) * mm, (TOP - 6) * mm)
-        text.textLines(self.invoice.provider.get_address_lines().append(self.invoice.provider.siret))
+        text.textLines(self.invoice.provider.get_address_lines())
         self.pdf.drawText(text)
 
         text = self.pdf.beginText((LEFT + 40) * mm, (TOP - 6) * mm)
