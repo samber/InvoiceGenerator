@@ -211,6 +211,7 @@ class SimpleInvoice(BaseInvoice):
             self.pdf.drawImage(self.invoice.provider.logo_filename, (LEFT + 84) * mm - width, (TOP - 4) * mm, width, height)
 
     def drawPayment(self, TOP, LEFT):
+        return
         self.pdf.setFont('DejaVu-Bold', 8)
         self.pdf.drawString(LEFT * mm, (TOP + 2) * mm, _(u'Payment information'))
 
@@ -395,6 +396,7 @@ class SimpleInvoice(BaseInvoice):
         self.drawCreator(TOP - i - 20, self.LEFT + 98)
 
     def drawCreator(self, TOP, LEFT):
+        return
         height = 20*mm
         if self.invoice.creator.stamp_filename:
             im = Image.open(self.invoice.creator.stamp_filename)
